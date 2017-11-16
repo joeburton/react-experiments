@@ -1,6 +1,7 @@
 const projects = (state = [], action) => {
     switch (action.type) {
         case 'ADD_PROJECT':
+            console.log('ADD_PROJECT: ', state, action)
             return [
                 ...state,
                 {
@@ -10,6 +11,7 @@ const projects = (state = [], action) => {
                 }
             ]
         case 'TOGGLE_PROJECT':
+            console.log('TOGGLE_PROJECT: ', state, action)
             return state.map(project =>
                 (project.id === action.id) ? { ...project, completed: !project.completed } : project
             )

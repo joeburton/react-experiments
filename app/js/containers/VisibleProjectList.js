@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { toggleProject } from '../actions'
+import { toggleProject } from '../actions/actions'
 import ProjectList from '../components/ProjectList'
 
 const getVisibleProjects = (projects, filter) => {

@@ -60,7 +60,7 @@ module.exports = {
     plugins: getPlugins(),
     cache: true,
     entry: [
-        path.join(__dirname, 'app/js/', 'index.js')
+        path.join(__dirname, 'app/js/', 'main.js')
     ],
     output: {
         path: path.join(__dirname, '/dist'),
