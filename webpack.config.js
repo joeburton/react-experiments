@@ -45,6 +45,7 @@ function getPlugins() {
         plugins.push(
             HTMLWebpackPluginConfig,
             ExtractTextPluginConfig
+            // new webpack.optimize.UglifyJsPlugin()
         );
     }
 
@@ -65,6 +66,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, '/dist'),
         filename: 'js/bundle.js'
+        // publicPath: path.join(__dirname, '/dist')
     },
     devServer: {
         contentBase: __dirname + '/dist',

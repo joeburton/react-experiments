@@ -4,8 +4,9 @@
   "description": "experimenting",
   "main": "app.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --inline --colors --hot",
-    "prod": "webpack -p"
+    "dev": "webpack-dev-server --progress --inline --colors --hot",
+    "prod": "webpack -p",
+    "watch-minified": "webpack-dev-server --optimize-minimize --progress --inline --colors --hot"
   },
   "repository": {
     "type": "git",
