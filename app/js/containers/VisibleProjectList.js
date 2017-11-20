@@ -23,9 +23,6 @@ const mapDispatchToProps = {
   onProjectClick: toggleProject
 }
 
-const VisibleProjectList = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ProjectList)
+const VisibleProjectList = connect(mapStateToProps, mapDispatchToProps)(ProjectList)
 
 export default VisibleProjectList

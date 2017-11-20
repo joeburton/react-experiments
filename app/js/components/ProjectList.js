@@ -5,11 +5,7 @@ import Project from './Project'
 const ProjectList = ({ projects, onProjectClick }) => (
   <ul className="project-list">
     {projects.map(project =>
-      <Project
-        key={project.id}
-        {...project}
-        onClick={() => onProjectClick(project.id)}
-      />
+      <Project key={project.id} {...project} onClick={() => onProjectClick(project.id)} />
     )}
   </ul>
 )
