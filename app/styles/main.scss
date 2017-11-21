@@ -2,8 +2,9 @@
 @import "mixins";
 @import "colors";
 @import "form.scss";
-@import "footer-links.scss";
+@import "filter-links.scss";
 @import "project-list.scss";
+@import "footer.scss";
 
 html {
     -webkit-tap-highlight-color: transparent;
@@ -32,17 +33,6 @@ body {
     }
 }
 
-.main-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 50px;
-    background-color: $green-zanah;
-}
-
 .navigation-public {
     position: fixed;
     top: 50px;
@@ -65,8 +55,4 @@ body {
     position: absolute;
     right: 10px;
     top: 10px;
-}
-
-.content {
-    margin: 20px 20px 0 10px;
 }

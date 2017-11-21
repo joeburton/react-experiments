@@ -1,8 +1,8 @@
 import React from 'react'
 import FilterLink from '../containers/FilterLink'
 
-const Filters = () => (
-    <section className="footer-links">
+const FilterLinks = () => (
+    <section className="filter-links">
         Show:
         {" "}
         <FilterLink filter="SHOW_ALL"> All </FilterLink>
@@ -13,4 +13,4 @@ const Filters = () => (
     </section>
 )
 
-export default Filters
+export default FilterLinks

@@ -3,8 +3,8 @@ import React from 'react'
 // Components
 import Header from './Header'
 import Navigation from './Navigation'
-import Content from './content'
-import Filters from './Filters'
+import Footer from './Footer'
+import FilterLinks from './FilterLinks'
 
 // Containers
 import AddProject from '../containers/AddProject'
@@ -12,8 +12,8 @@ import VisibleProjectList from '../containers/VisibleProjectList'
 
 let items = [{
   description: 'React 16 prototype',
-  testframework: 'Jest',
-  developer: 'Joe Burton'
+  item1: 'Jest',
+  item2: 'Joe Burton'
 }];
 
 const App = () => (
@@ -21,8 +21,8 @@ const App = () => (
     <Navigation />
     <AddProject />
     <VisibleProjectList />
-    <Content items={items} />
-    <Filters />
+    <FilterLinks />
+    <Footer items={items} />
   </div>
 )
 

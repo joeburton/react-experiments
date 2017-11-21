@@ -1,26 +1,28 @@
 import React from 'react';
 
-export default class Content extends React.Component {
+const Footer = class Content extends React.Component {
     constructor(props) {
         super(props);
     }
    render() {
-        let details = [];
+    
+    let details = [];
     
         for (let i = 0; i < this.props.items.length; i++) {
             
             details.push(
                 <ul className="content" key={i}>
-                    <li>{this.props.items[i].description}</li>
-                    <li>{this.props.items[i].testframework}</li>
+                    <li>{this.props.items[i].description}</li> | <li>{this.props.items[i].item1}</li> | <li>{this.props.items[i].item2}</li>
                 </ul>
             );
 
         }
         return (
-            <section className="content">
+            <section className="footer">
                 {details}
             </section>
         );
     }
 }
+
+export default Footer;
