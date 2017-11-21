@@ -1,10 +1,10 @@
 import React from 'react'
 
 // Components
-import Footer from './Footer'
 import Header from './Header'
 import Navigation from './Navigation'
 import Content from './content'
+import Filters from './Filters'
 
 // Containers
 import AddProject from '../containers/AddProject'
@@ -28,7 +28,7 @@ const App = () => (
     <AddProject />
     <VisibleProjectList />
     <Content items={items} />
-    <Footer />
+    <Filters />
   </div>
 )
 

@@ -1,4 +1,4 @@
-let nextProjectId = 0
+let nextProjectId = 1
 
 export const addProject = (text) => ({
     type: 'ADD_PROJECT',

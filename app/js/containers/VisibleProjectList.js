@@ -7,9 +7,9 @@ const getVisibleProjects = (projects, filter) => {
     case 'SHOW_ALL':
       return projects
     case 'SHOW_COMPLETED':
-      return projects.filter(t => t.completed)
+      return projects.filter(project => project.completed)
     case 'SHOW_ACTIVE':
-      return projects.filter(t => !t.completed)
+      return projects.filter(project => !project.completed)
     default:
       throw new Error('Unknown filter: ' + filter)
   }
