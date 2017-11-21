@@ -1,0 +1,28 @@
+.navigation-public {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    transform: translate3d(-75vw, 0, 0);
+    transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+    overflow: hidden;
+    pointer-events: auto;
+    background-color: $green-forest;
+
+    li {
+        padding: 10px 0 0 15px;
+        color: $white;
+    }
+}
+
+.toggle-nav {
+    border-bottom: 17px double black; 
+    border-top: 6px solid black; 
+    content: "";
+    height: 5px; 
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

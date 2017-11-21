@@ -1,10 +1,5 @@
-let initialState = [
-    {
-        id: 0,
-        text: 'Learn Jest.',
-        completed: false
-    }
-];
+
+import initialState from '../data/notes';
 
 const projects = (state = initialState, action) => {
     switch (action.type) {

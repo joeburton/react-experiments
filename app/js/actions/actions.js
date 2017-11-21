@@ -1,8 +1,12 @@
-let nextProjectId = 1
+
+const generateId = () => {
+    let id = document.querySelectorAll('.project-list li').length;
+    return id++;
+}
 
 export const addProject = (text) => ({
     type: 'ADD_PROJECT',
-    id: nextProjectId++,
+    id: generateId(),
     text
 })
 

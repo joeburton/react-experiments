@@ -16,17 +16,11 @@ export default class NavigationPublic extends React.Component {
                     <div className="navigation-public" style={{
                         transform: "translate3d(" + x + "vw, 0vw, 0)"
                     }}>
-                        <div>
-                            <div className="bg-full fixed" />
-                        </div>
-
-                        <div className="menu centre-children-column">
-                            <ul>
-                                <li>Nav items</li>
-                                <li>Nav items</li>
-                                <li>Nav items</li>
-                            </ul>
-                        </div>
+                        <ul>
+                            <li>Home</li>
+                            <li>Products</li>
+                            <li>Contact</li>
+                        </ul>
                     </div>
                 }
             </Motion>
