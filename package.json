@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --progress --inline --colors --hot",
     "prod": "webpack -p",
-    "watch-minified": "webpack-dev-server --optimize-minimize --progress --inline --colors --hot"
+    "watch-minified": "webpack-dev-server --optimize-minimize --progress --inline --colors --hot",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -32,9 +33,10 @@
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
+    "babel-jest": "^21.2.0",
     "babel-loader": "^6.2.10",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.22.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
@@ -42,8 +44,10 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.10.0",
     "html-webpack-plugin": "^2.26.0",
+    "jest": "^21.2.1",
     "jsonp": "^0.2.1",
     "node-sass": "^4.5.0",
+    "react-test-renderer": "^16.1.1",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",

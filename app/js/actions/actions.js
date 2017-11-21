@@ -4,9 +4,11 @@ const generateId = () => {
     return id++;
 }
 
+let nextProjectId = 2;
+
 export const addProject = (text) => ({
     type: 'ADD_PROJECT',
-    id: generateId(),
+    id: nextProjectId++,
     text
 })
 
