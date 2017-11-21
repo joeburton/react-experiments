@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --progress --inline --colors --hot",
     "prod": "webpack -p",
     "watch-minified": "webpack-dev-server --optimize-minimize --progress --inline --colors --hot",
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,8 @@
     "babel-preset-stage-0": "^6.22.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
     "eslint": "^4.11.0",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.10.0",
