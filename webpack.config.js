@@ -70,9 +70,7 @@ module.exports = {
         // publicPath: path.join(__dirname, '/dist')
     },
     devServer: {
-        contentBase: __dirname + '/dist',
         hot: true,
-        historyAPIFallback: true,
         port: 3030
     },
     devtool: sourceMapType(),
