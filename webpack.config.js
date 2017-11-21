@@ -10,8 +10,8 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
     hash: true
 });
 
-const ExtractTextPluginConfig = new ExtractTextPlugin('styles/main.css', {
-    allChunks: true
+const ExtractTextPluginConfig = new ExtractTextPlugin({
+    filename:'styles/main.css'
 });
 
 var isProd = (process.env.NODE_ENV === 'production');
@@ -87,15 +87,17 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader'
             },
+            // {
+            //     test: /\.scss$/,
+            //     exclude: /node_modules/,
+            //     loader: 'style!css?url=false!sass'
+            // },
             {
-                test: /\.scss$/,
-                exclude: /node_modules/,
-                loader: 'style!css?url=false!sass'
-            },
-            {
-                test: /\.scss$/,
-                exclude: /node_modules/,
-                loader: ExtractTextPluginConfig.extract('css?url=false!sass')
+                test:/\.(s*)css$/, 
+                use: ExtractTextPlugin.extract({ 
+                        fallback:'style-loader',
+                        use:['css-loader','sass-loader'],
+                    })
             },
             {
                 test: /\.(json|pdf)$/i,
