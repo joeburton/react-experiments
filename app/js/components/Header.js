@@ -3,12 +3,12 @@ import React from 'react';
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { date: new Date() };
+        this.state = { title: 'Dev experiments' };
     }
     render() {
         return (
             <header className="main-header">
-                <span>It is {this.state.date.toLocaleTimeString()}.</span>
+                <h1>{this.state.title}</h1>
                 <div className="toggle-nav" onClick={this.props.toggleNav} ></div>
             </header>
         );

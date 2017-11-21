@@ -11,15 +11,9 @@ import AddProject from '../containers/AddProject'
 import VisibleProjectList from '../containers/VisibleProjectList'
 
 let items = [{
-  description: 'Transfer from EUR',
-  conversionRate: 1,
-  transactionCurrency: 'EUR',
-  billAmount:  1.3
-}, {
-  description: 'Transfer from GBP',
-  conversionRate: 2,
-  transactionCurrency: 'GBP',
-  billAmount:  1.1
+  description: 'React 16 prototype',
+  testframework: 'Jest',
+  developer: 'Joe Burton'
 }];
 
 const App = () => (

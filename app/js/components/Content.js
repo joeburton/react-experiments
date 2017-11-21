@@ -5,29 +5,21 @@ export default class Content extends React.Component {
         super(props);
     }
    render() {
-        console.log(this.props)
-
-        let transactionFrom = [];
-        let billAmount = [];
+        let details = [];
     
         for (let i = 0; i < this.props.items.length; i++) {
             
-            let item = '';
-    
-            if (this.props.items[i].conversionRate === 1) {
-                transactionFrom.push(<span className="copy-reference text-left" key={i}>{this.props.items[i].description}<br/></span>);
-            } else {
-                transactionFrom.push(<span className="copy-reference text-left" key={i}>{this.props.items[i].description} at {this.props.items[i].conversionRate}</span>)
-            }
-
-            billAmount.push(<p className="copy-total" key={i}>{this.props.items[i].transactionCurrency + this.props.items[i].billAmount}</p>);
+            details.push(
+                <ul className="content" key={i}>
+                    <li>{this.props.items[i].description}</li>
+                    <li>{this.props.items[i].testframework}</li>
+                </ul>
+            );
 
         }
         return (
             <section className="content">
-                <h1>React Motion - Navigation</h1>
-                {transactionFrom}
-                {billAmount}
+                {details}
             </section>
         );
     }
