@@ -1,4 +1,14 @@
-const projects = (state = [], action) => {
+let initialState = [
+    {
+        id: 0,
+        text: 'Learn Jest.',
+        completed: false
+    }
+];
+
+alert('test..');
+
+const projects = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_PROJECT':
             console.log('ADD_PROJECT: ', state, action)

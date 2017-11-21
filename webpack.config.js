@@ -11,7 +11,7 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 const ExtractTextPluginConfig = new ExtractTextPlugin({
-    filename:'styles/main.css'
+    filename: 'styles/main.css'
 });
 
 var isProd = (process.env.NODE_ENV === 'production');
@@ -44,7 +44,8 @@ function getPlugins() {
     else {
         plugins.push(
             HTMLWebpackPluginConfig,
-            ExtractTextPluginConfig
+            ExtractTextPluginConfig,
+            new webpack.HotModuleReplacementPlugin()
             // new webpack.optimize.UglifyJsPlugin()
         );
     }
@@ -87,17 +88,12 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader'
             },
-            // {
-            //     test: /\.scss$/,
-            //     exclude: /node_modules/,
-            //     loader: 'style!css?url=false!sass'
-            // },
             {
-                test:/\.(s*)css$/, 
-                use: ExtractTextPlugin.extract({ 
-                        fallback:'style-loader',
-                        use:['css-loader','sass-loader'],
-                    })
+                test: /\.(s*)css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'sass-loader'],
+                })
             },
             {
                 test: /\.(json|pdf)$/i,
