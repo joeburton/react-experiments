@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --progress --inline --colors --hot",
     "prod": "webpack -p",
     "watch-minified": "webpack-dev-server --optimize-minimize --progress --inline --colors --hot",
-    "test": "jest --watchAll"
+    "test": "jest --coverage --verbose --watchAll"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./enzyme.setup.js"

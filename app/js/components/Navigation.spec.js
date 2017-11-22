@@ -26,6 +26,8 @@ describe('Navigation', () => {
         expect(wrapper.find(NavigationPublic)).toBeTruthy();
         expect(wrapper.find(NavigationPublic).length).toEqual(1);
         expect(wrapper.find(NavigationPublic).at(0).props().amActive).toBe(false);
+
+        //console.log(wrapper.debug());
     });
 
     it('should toggle the nav state #toggleNav', () => {
@@ -40,7 +42,6 @@ describe('Navigation', () => {
 
         expect(toogleNavSpy).toHaveBeenCalled();
     })
-
 
     it('should spyOn on a component method but also force a different return value, useful :)', () => {
         const wrapper = mount(<Navigation />);
