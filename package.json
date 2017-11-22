@@ -9,6 +9,9 @@
     "watch-minified": "webpack-dev-server --optimize-minimize --progress --inline --colors --hot",
     "test": "jest --watchAll"
   },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./enzyme.setup.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/n/a.git"
