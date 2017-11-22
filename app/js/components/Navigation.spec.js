@@ -27,7 +27,7 @@ describe('Navigation', () => {
         expect(wrapper.find(NavigationPublic).length).toEqual(1);
         expect(wrapper.find(NavigationPublic).at(0).props().amActive).toBe(false);
 
-        //console.log(wrapper.debug());
+        // console.log(wrapper.debug());
     });
 
     it('should toggle the nav state #toggleNav', () => {

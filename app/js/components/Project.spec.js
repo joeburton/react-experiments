@@ -24,13 +24,13 @@ describe('Project', () => {
         expect(wrapper.find(Project).at(0).find('li').length).toEqual(1);
         expect(wrapper.find(Project).at(0).find('li').text()).toEqual('some string');
 
-        // wrapper.instance().onClick();
-        // expect(wrapper.state().publicNavigation.amActive).toBe(false);
-        // expect(mockFunction).toHaveBeenCalled();
+        expect(wrapper.find(Project).at(0).find('li').simulate('click'));
+        expect(mockFunction.mock.calls.length).toEqual(1);
+        expect(mockFunction).toHaveBeenCalled();
 
-        console.log(wrapper.find(Project).at(0))
-        console.log(wrapper.find(Project).at(0).props());
-        console.log(wrapper.debug());
+        // console.log(wrapper.find(Project).at(0))
+        // console.log(wrapper.find(Project).at(0).props());
+        // console.log(wrapper.debug());
     });
 
 });

@@ -9,7 +9,7 @@ const wrapper = shallow(<FilterLinks />)
 
 describe('FilterLinks', () => {
     it('should render a <FilterLinks /> component', () => {
-        
+
         // test component wrapper
         expect(wrapper.type()).toEqual('section');
         expect(wrapper.hasClass('filter-links')).toBe(true);
