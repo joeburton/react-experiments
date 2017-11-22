@@ -1,7 +1,7 @@
 import * as actions from './actions'
 
-describe('project actions', () => {
-  it('addProject should create ADD_PROJECT action', () => {
+describe('Project actions', () => {
+  it('should call addProject', () => {
     expect(actions.addProject('Use Redux')).toEqual({
       type: 'ADD_PROJECT',
       id: 2,
@@ -9,14 +9,14 @@ describe('project actions', () => {
     })
   })
 
-  it('setVisibilityFilter should create SET_VISIBILITY_FILTER action', () => {
+  it('should call setVisibilityFilter', () => {
     expect(actions.setVisibilityFilter('active')).toEqual({
       type: 'SET_VISIBILITY_FILTER',
       filter: 'active'
     })
   })
 
-  it('toggleProject should create TOGGLE_PROJECT action', () => {
+  it('should call toggleProject', () => {
     expect(actions.toggleProject(1)).toEqual({
       type: 'TOGGLE_PROJECT',
       id: 1

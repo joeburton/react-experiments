@@ -4,31 +4,27 @@ import { shallow, mount, render } from 'enzyme';
 
 import Header from './Header'
 
-const wrapper = shallow(<Header />)
+describe('Header', () => {
+    it('should render a <Header /> component', () => {
 
-describe('components/', () => {
-    describe('FilterLinks', () => {
-        it('should render correctly', () => {
-            
-            // test compoent wrapper
-            // expect(wrapper.type()).toEqual('section');
-            // expect(wrapper.hasClass('filter-links')).toBe(true);
+        const mockFunction = jest.fn();
 
-            // // test first child
-            // expect(wrapper.childAt(0).type()).toEqual('span');
-            // // test first child html content
-            // expect(wrapper.childAt(0).containsMatchingElement(<span>Show:</span>)).toEqual(true);
-            // // test first child html content text
-            // expect(wrapper.childAt(0).text()).toEqual('Show:');
+        const props = {
+            toggleNav: mockFunction
+        }
+        
+        const wrapper = shallow(<Header {...props} />)
+        
+        // test component wrapper
+        expect(wrapper.type()).toEqual('header');
+        expect(wrapper.hasClass('main-header')).toBe(true);
 
-            // // check number of nested components
-            // expect(wrapper.find(FilterLink).length).toEqual(3);
+        expect(wrapper.find('h1').text()).toBe('Dev experiments');
 
-            // // test prop values
-            // expect(wrapper.find(FilterLink).at(0).props().filter).toBe('SHOW_ALL');
-            // expect(wrapper.find(FilterLink).at(1).props().filter).toBe('SHOW_ACTIVE');
-            // expect(wrapper.find(FilterLink).at(2).props().filter).toBe('SHOW_COMPLETED');
+        expect(mockFunction.mock.calls.length).toEqual(0);
+        wrapper.find('.toggle-nav').simulate('click');
+        wrapper.find('.toggle-nav').simulate('click');
+        expect(mockFunction.mock.calls.length).toEqual(2);
 
-        })
     })
 })
