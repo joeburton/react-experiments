@@ -1,44 +1,35 @@
-import React from 'react'
+import React from 'react';
+
+import { shallow, mount, render } from 'enzyme';
 
 import FilterLinks from './FilterLinks'
 import FilterLink from '../containers/FilterLink'
-import { createRenderer } from 'react-test-renderer/shallow';
 
-const setup = () => {
-    const props = {
-    }
-      
-    const renderer = createRenderer()
+const wrapper = shallow(<FilterLinks />)
 
-    renderer.render(
-        <FilterLinks {...props} />
-    )
-
-    const output = renderer.getRenderOutput()
-
-    return {
-        props: props,
-        output: output,
-        renderer: renderer
-    }
-}
-
-describe('components', () => {
+describe('components/', () => {
     describe('FilterLinks', () => {
         it('should render correctly', () => {
-            const { output } = setup()
+            
+            // test compoent wrapper
+            expect(wrapper.type()).toEqual('section');
+            expect(wrapper.hasClass('filter-links')).toBe(true);
 
-            expect(output.type).toBe('section')
-            expect(output.props.className).toBe('filter-links')
+            // test first child
+            expect(wrapper.childAt(0).type()).toEqual('span');
+            // test first child html content
+            expect(wrapper.childAt(0).containsMatchingElement(<span>Show:</span>)).toEqual(true);
+            // test first child html content text
+            expect(wrapper.childAt(0).text()).toEqual('Show:');
 
-            const [span, href] = output.props.children
+            // check number of nested components
+            expect(wrapper.find(FilterLink).length).toEqual(3);
 
-            expect(span.type).toBe('span')
-            expect(span.props.children).toBe('Show:')
+            // test prop values
+            expect(wrapper.find(FilterLink).at(0).props().filter).toBe('SHOW_ALL');
+            expect(wrapper.find(FilterLink).at(1).props().filter).toBe('SHOW_ACTIVE');
+            expect(wrapper.find(FilterLink).at(2).props().filter).toBe('SHOW_COMPLETED');
 
-            expect(href.type).toBe(FilterLink)
-            expect(href.props.filter).toBe('SHOW_ALL')
         })
-
     })
 })
