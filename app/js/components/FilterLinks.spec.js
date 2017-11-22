@@ -17,9 +17,9 @@ describe('FilterLinks', () => {
         // test first child
         expect(wrapper.childAt(0).type()).toEqual('span');
         // test first child html content
-        expect(wrapper.childAt(0).containsMatchingElement(<span>Show:</span>)).toEqual(true);
+        expect(wrapper.childAt(0).containsMatchingElement(<span>Show: </span>)).toEqual(true);
         // test first child html content text
-        expect(wrapper.childAt(0).text()).toEqual('Show:');
+        expect(wrapper.childAt(0).text()).toEqual('Show: ');
 
         // check number of nested components
         expect(wrapper.find(FilterLink).length).toEqual(3);

@@ -7,7 +7,6 @@ export default class Navigation extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            date: new Date(),
             publicNavigation: {
                 amActive: false
             }
@@ -16,7 +15,6 @@ export default class Navigation extends React.Component {
         this.toggleNav = this.toggleNav.bind(this);
     }
     toggleNav() {
-
         let navState =  (this.state.publicNavigation.amActive) ? false : true;
 
         this.setState({
