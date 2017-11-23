@@ -19,8 +19,8 @@ describe('Footer', () => {
 
         const wrapper = shallow(<Footer {...props} />)
         
-        console.log(wrapper.instance().props);
-        console.log(wrapper.debug());
+        // console.log(wrapper.instance().props);
+        // console.log(wrapper.debug());
 
         // test component wrapper
         expect(wrapper.type()).toEqual('section');
