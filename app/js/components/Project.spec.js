@@ -33,19 +33,38 @@ describe('Project', () => {
         // console.log(wrapper.debug());
     });
 
-    it('should set the list item to be styled with a strike through / line-through', () => {
+    it('should set the list item to have the text-decoration property of line-through', () => {
         const mockFunction = jest.fn();
         
-                const props = {
-                    onClick: mockFunction,
-                    completed: true,
-                    text: 'some string'
-                }
-        
+        const props = {
+            onClick: mockFunction,
+            completed: true,
+            text: 'some string'
+        }
+
         const wrapper = mount(<Project {...props} />)
         
-        let containerStyle = wrapper.find(Project).at(0).find('li').get(0).style;
-        expect(containerStyle.to.have.property('opacity', '1')).toBeTruthy();
+        // console.log(wrapper.debug());
+        // console.log(wrapper.find(Project).at(0).find('li').get(0).props.style);
+        expect(wrapper.find(Project).at(0).find('li').get(0).props.style.textDecoration).toBe('line-through');
+
+    });
+
+
+    it('should set the list item to have the text-decoration property of none', () => {
+        const mockFunction = jest.fn();
+        
+        const props = {
+            onClick: mockFunction,
+            completed: false,
+            text: 'some string'
+        }
+
+        const wrapper = mount(<Project {...props} />)
+        wrapper.find('li').simulate('click');
+        expect(wrapper.find(Project).at(0).find('li').get(0).props.style.textDecoration).toBe('none');
+
+        console.log(wrapper.find(Project).at(0).props().text);
 
     });
     
