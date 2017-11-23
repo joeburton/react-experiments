@@ -33,4 +33,21 @@ describe('Project', () => {
         // console.log(wrapper.debug());
     });
 
+    it('should set the list item to be styled with a strike through / line-through', () => {
+        const mockFunction = jest.fn();
+        
+                const props = {
+                    onClick: mockFunction,
+                    completed: true,
+                    text: 'some string'
+                }
+        
+        const wrapper = mount(<Project {...props} />)
+        
+        let containerStyle = wrapper.find(Project).at(0).find('li').get(0).style;
+        expect(containerStyle.to.have.property('opacity', '1')).toBeTruthy();
+
+    });
+    
+
 });

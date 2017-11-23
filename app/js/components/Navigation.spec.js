@@ -50,7 +50,7 @@ describe('Navigation', () => {
             return 'crackers';
         });
 
-        wrapper.instance().toggleNav();
+        console.log(wrapper.debug());
         expect(wrapper.state().publicNavigation.amActive).toBe(false);
 
     })
