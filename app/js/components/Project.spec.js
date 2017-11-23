@@ -67,6 +67,5 @@ describe('Project', () => {
         console.log(wrapper.find(Project).at(0).props().text);
 
     });
-    
 
 });
