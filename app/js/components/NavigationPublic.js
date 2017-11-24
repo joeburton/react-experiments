@@ -9,7 +9,6 @@ export default class NavigationPublic extends React.Component {
         this.targetX = 25;
         this.originX = 100;
 
-        // console.log(props)
     }
     render() {
         return (
