@@ -50,7 +50,6 @@ describe('Project', () => {
 
     });
 
-
     it('should set the list item to have the text-decoration property of none', () => {
         const mockFunction = jest.fn();
         
@@ -64,7 +63,7 @@ describe('Project', () => {
         wrapper.find('li').simulate('click');
         expect(wrapper.find(Project).at(0).find('li').get(0).props.style.textDecoration).toBe('none');
 
-        console.log(wrapper.find(Project).at(0).props().text);
+        // console.log(wrapper.find(Project).at(0).props().text);
 
     });
 
