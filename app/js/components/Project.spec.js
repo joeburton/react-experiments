@@ -30,7 +30,7 @@ describe('Project', () => {
 
         // console.log(wrapper.find(Project).at(0))
         // console.log(wrapper.find(Project).at(0).props());
-        // console.log(wrapper.debug());
+        console.log(wrapper.debug());
     });
 
     it('should set the list item to have the text-decoration property of line-through', () => {
