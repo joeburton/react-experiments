@@ -2,7 +2,7 @@ import React from 'react';
 
 import { shallow, mount, render } from 'enzyme';
 
-import Link from './Link'
+import { Link } from './Link'
 
 describe('Link', () => {
 

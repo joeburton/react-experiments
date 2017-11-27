@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Project from './Project'
+import { Project } from './Project'
 
-const ProjectList = ({ projects, onProjectClick }) => (
+export const ProjectList = ({ projects, onProjectClick }) => (
   <ul className="project-list">
     {projects.map(project =>
       <Project key={project.id} {...project} onClick={() => onProjectClick(project.id)} />
@@ -18,5 +18,3 @@ ProjectList.propTypes = {
   }).isRequired).isRequired,
   onProjectClick: PropTypes.func.isRequired
 }
-
-export default ProjectList

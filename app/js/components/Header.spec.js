@@ -2,7 +2,7 @@ import React from 'react';
 
 import { shallow, mount, render } from 'enzyme';
 
-import Header from './Header'
+import { Header } from './Header'
 
 describe('Header', () => {
     it('should render a <Header /> component', () => {
@@ -26,5 +26,7 @@ describe('Header', () => {
         wrapper.find('.toggle-nav').simulate('click');
         expect(mockFunction.mock.calls.length).toEqual(2);
 
+        console.log(wrapper.state());
+        console.log(wrapper.debug());
     })
 })

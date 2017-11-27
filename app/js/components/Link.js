@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Link = ({ active, children, onClick }) => {
+export const Link = ({ active, children, onClick }) => {
     if (active) {
         return <span className="none">{children}</span>
     }
@@ -18,5 +18,3 @@ Link.propTypes = {
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func.isRequired
 }
-
-export default Link

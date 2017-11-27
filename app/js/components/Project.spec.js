@@ -2,7 +2,7 @@ import React from 'react';
 
 import { shallow, mount, render } from 'enzyme';
 
-import Project from './Project'
+import { Project } from './Project'
 
 describe('Project', () => {
 

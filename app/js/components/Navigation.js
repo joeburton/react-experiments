@@ -1,9 +1,9 @@
 import React from 'react';
-import NavigationPublic from './NavigationPublic';
-import NavigationPrivate from './NavigationPrivate';
-import Header from './Header';
+import {NavigationPublic} from './NavigationPublic';
+import {NavigationPrivate} from './NavigationPrivate';
+import {Header} from './Header';
 
-export default class Navigation extends React.Component {
+export class Navigation extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

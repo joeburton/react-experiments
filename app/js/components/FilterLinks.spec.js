@@ -2,7 +2,7 @@ import React from 'react';
 
 import { shallow, mount, render } from 'enzyme';
 
-import FilterLinks from './FilterLinks'
+import { FilterLinks } from './FilterLinks'
 import FilterLink from '../containers/FilterLink'
 
 const wrapper = shallow(<FilterLinks />)

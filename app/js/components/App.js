@@ -1,10 +1,9 @@
 import React from 'react'
 
 // Components
-import Header from './Header'
-import Navigation from './Navigation'
-import Footer from './Footer'
-import FilterLinks from './FilterLinks'
+import {Navigation} from './Navigation'
+import {Footer} from './Footer'
+import {FilterLinks} from './FilterLinks'
 
 // Containers
 import AddProject from '../containers/AddProject'

@@ -2,10 +2,10 @@ import React from 'react';
 
 import { shallow, mount, render } from 'enzyme';
 
-import Navigation from './Navigation'
-import NavigationPrivate from './NavigationPrivate'
-import NavigationPublic from './NavigationPublic'
-import Header from './Header'
+import { Navigation } from './Navigation'
+import { NavigationPrivate } from './NavigationPrivate'
+import { NavigationPublic } from './NavigationPublic'
+import { Header } from './Header'
 
 describe('Navigation', () => {
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import FilterLink from '../containers/FilterLink'
 
-const FilterLinks = () => (
+export const FilterLinks = () => (
     <section className="filter-links">
         <span>Show: </span>
         <FilterLink filter="SHOW_ALL">All</FilterLink> | 
@@ -9,5 +9,3 @@ const FilterLinks = () => (
         <FilterLink filter="SHOW_COMPLETED">Completed</FilterLink>
     </section>
 )
-
-export default FilterLinks

@@ -2,8 +2,8 @@ import React from 'react';
 
 import { shallow, mount, render } from 'enzyme';
 
-import ProjectList from './ProjectList'
-import Project from './Project'
+import { ProjectList } from './ProjectList'
+import { Project } from './Project'
 
 describe('ProjectList', () => {
 

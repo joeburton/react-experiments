@@ -1,7 +1,7 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
 
-export default class NavigationPublic extends React.Component {
+export class NavigationPublic extends React.Component {
     constructor(props) {
         super(props);
         this.state = { date: new Date() };
