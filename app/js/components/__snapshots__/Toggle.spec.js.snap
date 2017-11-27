@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle ON OFF 1`] = `
+<button
+  onClick={[Function]}
+>
+  ON
+</button>
+`;
+
+exports[`Toggle ON OFF 2`] = `
+<button
+  onClick={[Function]}
+>
+  OFF
+</button>
+`;
+
+exports[`Toggle ON OFF 3`] = `
+<button
+  onClick={[Function]}
+>
+  ON
+</button>
+`;
