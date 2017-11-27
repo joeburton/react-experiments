@@ -3,27 +3,27 @@ import { connect } from 'react-redux'
 import { addProject } from '../actions/actions'
 
 let AddProject = ({ dispatch }) => {
-  let input
+    let input
 
-  return (
-    <div className="add-project">
-      <form onSubmit={e => {
-        e.preventDefault()
-        if (!input.value.trim()) {
-          return
-        }
-        dispatch(addProject(input.value))
-        input.value = ''
-      }}>
-        <input ref={node => {
-          input = node
-        }} />
-        <button type="submit">
-          Add Todo
+    return (
+        <div className="add-project">
+            <form onSubmit={e => {
+                e.preventDefault()
+                if (!input.value.trim()) {
+                    return
+                }
+                dispatch(addProject(input.value))
+                input.value = ''
+            }}>
+                <input ref={node => {
+                    input = node
+                }} />
+                <button type="submit">
+                    Add Todo
         </button>
-      </form>
-    </div>
-  )
+            </form>
+        </div>
+    )
 }
 AddProject = connect()(AddProject)
 
