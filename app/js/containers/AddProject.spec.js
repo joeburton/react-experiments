@@ -74,7 +74,7 @@ describe('AddProject', () => {
         expect(spy.mock.calls.length).toEqual(2);
     });
 
-    it('should call dispatch', () => {
+    it('should call store.dispatch with a new project', () => {
 
         form.find('input').instance().value = 'new project details';
         form.simulate('submit', { preventDefault});
