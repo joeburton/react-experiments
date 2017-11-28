@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { addProject } from '../actions/actions'
 
 let AddProject = ({ dispatch }) => {
+    
     let input
 
     return (
@@ -10,10 +11,11 @@ let AddProject = ({ dispatch }) => {
             <form onSubmit={e => {
                 e.preventDefault()
                 if (!input.value.trim()) {
-                    return
+                    return;
+                } else {
+                    dispatch(addProject(input.value))
+                    input.value = ''
                 }
-                dispatch(addProject(input.value))
-                input.value = ''
             }}>
                 <input ref={node => {
                     input = node
@@ -25,6 +27,7 @@ let AddProject = ({ dispatch }) => {
         </div>
     )
 }
+
 AddProject = connect()(AddProject)
 
 export default AddProject

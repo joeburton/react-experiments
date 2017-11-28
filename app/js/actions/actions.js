@@ -1,4 +1,3 @@
-
 const generateId = () => {
     let id = document.querySelectorAll('.project-list li').length;
     return id++;
