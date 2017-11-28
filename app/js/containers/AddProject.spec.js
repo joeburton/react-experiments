@@ -80,6 +80,7 @@ describe('AddProject', () => {
         form.simulate('submit', { preventDefault});
         
         expect(store.dispatch).toHaveBeenCalled();
+        expect(store.dispatch).toHaveBeenCalledWith({"id": 2, "text": "new project details", "type": "ADD_PROJECT"});
         expect(store.dispatch.mock.calls.length).toEqual(1);
 
         expect(form.find('input').instance().value).toEqual('');
