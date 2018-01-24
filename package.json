@@ -4,7 +4,7 @@
   "description": "experimenting",
   "main": "app.js",
   "scripts": {
-    "dev": "webpack-dev-server --progress --inline --colors --hot",
+    "dev": "webpack-dev-server --progress --inline --colors --hot --host 127.0.0.1",
     "prod": "webpack -p",
     "watch-minified": "webpack-dev-server --optimize-minimize --progress --inline --colors --hot",
     "test": "jest --coverage --verbose --watchAll"
@@ -56,6 +56,7 @@
     "react-test-renderer": "^16.1.1",
     "redux-mock-store": "^1.3.0",
     "sass-loader": "^4.1.1",
+    "should-not-update": "^1.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.7.0",

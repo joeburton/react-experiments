@@ -1,5 +1,6 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
+import ShouldNotUpdate from 'should-not-update'
 
 export class NavigationPublic extends React.Component {
     constructor(props) {
@@ -8,7 +9,14 @@ export class NavigationPublic extends React.Component {
 
         this.targetX = 25;
         this.originX = 100;
+        this.track = 0;
 
+        this.inc = this.inc.bind(this);
+
+    }
+    inc () {
+        this.track++;
+        console.log(this.track);
     }
     render() {
         return (
@@ -17,11 +25,12 @@ export class NavigationPublic extends React.Component {
                     <div className="navigation-public" style={{
                         transform: "translate3d(" + x + "vw, 0vw, 0)"
                     }}>
-                        <ul>
-                            <li>Home</li>
+                        <ShouldNotUpdate component="ul">
+                        {console.log('render... .. .')}
+                            <li>Home {x} {this.inc()}</li>
                             <li>Products</li>
                             <li>Contact</li>
-                        </ul>
+                        </ShouldNotUpdate>
                     </div>
                 }
             </Motion>

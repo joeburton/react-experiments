@@ -67,7 +67,7 @@ describe('Navigation', () => {
 
         expect(wrapper.find('.navigation-public').length).toBe(1);
         expect(wrapper.find('.navigation-public ul li').length).toBe(3);
-        expect(wrapper.find('.navigation-public ul').childAt(0).text()).toBe('Home');
+        expect(wrapper.find('.navigation-public ul').childAt(0).text()).toBe('Home 100 ');
         expect(wrapper.find('.navigation-public ul').childAt(1).text()).toBe('Products');
         expect(wrapper.find('.navigation-public ul').childAt(2).text()).toBe('Contact');
     })
