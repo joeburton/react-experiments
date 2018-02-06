@@ -2,11 +2,30 @@ import * as actions from './actions'
 
 describe('Project actions', () => {
   it('should call addProject', () => {
-    expect(actions.addProject('Use Redux')).toEqual({
+    expect(actions.addProject({
       type: 'ADD_PROJECT',
-      id: 2,
-      text: 'Use Redux'
+      id: 0,
+      text: 'Use Redux 1',
+      completed: false
+    })).toEqual({
+      type: 'ADD_PROJECT',
+      id: 0,
+      text: 'Use Redux 1',
+      completed: false
     })
+
+    expect(actions.addProject({
+      type: 'ADD_PROJECT',
+      id: 1,
+      text: 'Use Redux 2',
+      completed: false
+    })).toEqual({
+      type: 'ADD_PROJECT',
+      id: 1,
+      text: 'Use Redux 2',
+      completed: false
+    })
+
   })
 
   it('should call setVisibilityFilter', () => {
@@ -22,4 +41,5 @@ describe('Project actions', () => {
       id: 1
     })
   })
+
 })

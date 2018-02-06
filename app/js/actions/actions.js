@@ -1,14 +1,9 @@
-const generateId = () => {
-    let id = document.querySelectorAll('.project-list li').length;
-    return id++;
-}
 
-let nextProjectId = 2;
-
-export const addProject = (text) => ({
+export const addProject = (action) => ({
     type: 'ADD_PROJECT',
-    id: nextProjectId++,
-    text
+    id: action.id,
+    text: action.text,
+    completed: action.completed
 })
 
 export const setVisibilityFilter = (filter) => ({
