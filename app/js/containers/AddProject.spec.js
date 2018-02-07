@@ -76,19 +76,33 @@ describe('AddProject', () => {
 
     it('should call store.dispatch with a new project', () => {
 
-        form.find('input').instance().value = 'new project details';
+        // call 1
+        form.find('input').instance().value = 'new project details 1';
         form.simulate('submit', { preventDefault});
 
         expect(store.dispatch).toHaveBeenCalled();
 
         expect(store.dispatch).toHaveBeenCalledWith({
-            "id": 10, 
-            "text": "new project details", 
+            "id": 0, 
+            "text": "new project details 1", 
             "type": "ADD_PROJECT",
             "completed": false
         });
 
-        expect(store.dispatch.mock.calls.length).toEqual(1);
+        // call 2
+        form.find('input').instance().value = 'new project details 2';
+        form.simulate('submit', { preventDefault});
+
+        expect(store.dispatch).toHaveBeenCalled();
+
+        expect(store.dispatch).toHaveBeenCalledWith({
+            "id": 1, 
+            "text": "new project details 2", 
+            "type": "ADD_PROJECT",
+            "completed": false
+        });
+
+        expect(store.dispatch.mock.calls.length).toEqual(2);
 
         expect(form.find('input').instance().value).toEqual('');
 

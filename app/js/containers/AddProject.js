@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import { addProject } from '../actions/actions'
 
-let AddProject = ({ dispatch }) => {
+let AddProject = ({ dispatch, ...props }) => {
     let input
 
         return (
@@ -15,9 +15,10 @@ let AddProject = ({ dispatch }) => {
                     if (!input.value.trim()) {
                         return;
                     } else {
+                        // console.log(props);
                         dispatch(addProject({
                             text: input.value,
-                            id: 100, //@todo need to increment
+                            id: props.numberProjects++,
                             completed: false
                         }))
                         input.value = ''
@@ -34,6 +35,10 @@ let AddProject = ({ dispatch }) => {
         )
 }
 
-AddProject = connect()(AddProject)
+const stateToProps = function(state) {
+    return {
+        numberProjects: state.projects.length
+    }
+}
 
-export default AddProject;
+export default connect(stateToProps,)(AddProject)
