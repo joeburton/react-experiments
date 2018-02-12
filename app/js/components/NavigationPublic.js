@@ -16,7 +16,7 @@ export class NavigationPublic extends React.Component {
     }
     inc () {
         this.track++;
-        console.log(this.track);
+        // console.log(this.track);
     }
     render() {
         return (
@@ -26,7 +26,7 @@ export class NavigationPublic extends React.Component {
                         transform: "translate3d(" + x + "vw, 0vw, 0)"
                     }}>
                         <ShouldNotUpdate component="ul">
-                        {console.log('render... .. .')}
+                        {/* {console.log('render... .. .')} */}
                             <li>Home {x} {this.inc()}</li>
                             <li>Products</li>
                             <li>Contact</li>

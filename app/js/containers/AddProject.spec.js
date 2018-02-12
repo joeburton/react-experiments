@@ -51,7 +51,7 @@ describe('AddProject', () => {
         console.log(wrapper.props());
     });
 
-    xit('spyOn', () => {
+    it('spyOn', () => {
         const App = class extends React.Component {
             constructor(props) {
                 super(props);
@@ -105,6 +105,8 @@ describe('AddProject', () => {
         expect(store.dispatch.mock.calls.length).toEqual(2);
 
         expect(form.find('input').instance().value).toEqual('');
+
+        console.log(wrapper.debug());
 
     });
 
